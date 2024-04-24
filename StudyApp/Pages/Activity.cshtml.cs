@@ -16,10 +16,10 @@ namespace StudyApp.Pages
       new Day(200, 4),
       new Day(110, 3),
       new Day(195, 5),
-      new Day(92, 2), 
+      new Day(210, 2), 
       new Day(57, 1),
-      new Day(179, 3), 
-      new Day(300, 5)
+      new Day(350, 5),
+      new Day(179, 3) 
     };
 
 
