@@ -9,7 +9,7 @@ namespace StudyApp.Models
     public int Subjects
     {get; set;}
 
-    public Day(int minutes, int subjects)
+    public Day(int minutes = 0, int subjects = 0)
     {
       Minutes = minutes;
       Subjects = subjects;
