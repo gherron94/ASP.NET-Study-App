@@ -27,30 +27,30 @@ body {
 
 /* Progress tracker*/
 
-div.circle-col {
+div.bar-col {
 	position: relative;
 }
 
-.progress-circle.foreground {
-	stroke-dasharray: 300 300;
-	stroke-dashoffset: 300;
+.progress-bar.foreground {
+	stroke-dasharray: 200 200;
+	stroke-dashoffset: 200;
 }
 
-.progress-circle.full {
+/* .progress-bar.full {
 	stroke-dashoffset: 0;
 }
 
-.progress-circle.one-quarter {
-	stroke-dashoffset: 225;
-}
-
-.progress-circle.two-quarter {
+.progress-bar.one-quarter {
 	stroke-dashoffset: 150;
 }
 
-.progress-circle.three-quarter {
-	stroke-dashoffset: 75;
+.progress-bar.two-quarter {
+	stroke-dashoffset: 100;
 }
+
+.progress-bar.three-quarter {
+	stroke-dashoffset: 50;
+} */
 
 div.progress-info {
 	position: absolute;

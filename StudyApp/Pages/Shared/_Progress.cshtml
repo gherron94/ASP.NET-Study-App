@@ -8,18 +8,17 @@
           fill="transparent"
           x1="0"
           y1="15"
-          x2="300"
+          x2="200"
           y2="15" />
   <line class="progress-bar foreground"
           stroke=@Model.Foreground
           stroke-width="25"
-          stroke-linecap="square"
           fill="transparent"
           x1="0"
           y1="15"
-          x2="300"
-          y2="15"
-          <animate attributeName="stroke-dashoffset" from="0" to="@(300 *(1 - Model.PercentProgress))" dur=".75s" repeatcount="1" fill="freeze" />
+          x2="200"
+          y2="15">
+          <animate attributeName="stroke-dashoffset" from="200" to="@(200 *(1 - Model.PercentProgress))" dur=".75s" repeatcount="1" fill="freeze" />
   </svg>
 </div>
 <div class="progress-info">
