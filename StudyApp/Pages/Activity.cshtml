@@ -30,7 +30,7 @@
           var minutes = new ProgressTrackerModel
           {
             Background = "#cccccc",
-            Foreground = "#888888",
+            Foreground = "#0066cc",
             PercentProgress = @Model.PercentProgressMinutes ,
             DisplayNumber = @Model.DisplayMinutes,
             MinutesTarget = @Model.Target,
@@ -45,7 +45,7 @@
           var minutesWeekly = new ProgressTrackerModel
           {
             Background = "#cccccc",
-            Foreground = "#888888",
+            Foreground = "#0022aa",
             PercentProgress = @Model.PercentProgressMinutes ,
             DisplayNumber = @Model.DisplayMinutes,
             MinutesTarget = @Model.DisplayWeeklyTarget,
@@ -60,11 +60,11 @@
   <div class="col">
     <h2>Days</h2>
     <hr>
-    <h3><a asp-page="/Activity" asp-route-day="">Weekly Total</a></h3>
+    <h3 class="days-links"><a asp-page="/Activity" asp-route-day="">Weekly Total</a></h3>
     @for (int i = 0; i < Model.Days.Count; i++)
     { int currentDay = i + 1;
       <div>
-        <h3>
+        <h3 h2 class="days-links">
           <a asp-page="/Activity" asp-route-day="@i">Day @i</a>
         </h3>
         <h3>
