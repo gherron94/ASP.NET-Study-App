@@ -1,0 +1,41 @@
+﻿@page "/Days/{day:int?}"
+@model ActivityModel
+@{
+  ViewData["Title"] = "Activity";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Activity</h1>
+    <p>View your study activity</p>
+
+</div>
+
+<div class="row">
+  <div class="col">
+      @if (Model.IsWeeklyDisplay)
+      {
+      <h2>Weekly Total</h2>
+      }
+      else 
+      {
+      <h2>Day @Model.CurrentDisplayDay</h2>
+      }  
+      <h3>Minutes studied: @Model.DisplayMinutes</h3>
+      <h3>Subjects studied:  @Model.DisplaySubjects</h3>
+  </div>
+  <div class="col">
+    <h2>Days</h2>
+    <hr>
+    <h3><a asp-page="/Activity" asp-route-day="">Weekly Total</a></h3>
+    @for (int i = 0; i < Model.Days.Count; i++)
+    { int currentDay = i + 1;
+      <div>
+        <h3>
+          <a asp-page="/Activity" asp-route-day="@i">Day @i</a>
+        </h3>
+        <h3>
+        </h3>
+      </div>
+    }
+  </div>
+</div>
