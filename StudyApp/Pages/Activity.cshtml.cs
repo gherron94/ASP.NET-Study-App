@@ -13,6 +13,7 @@ namespace StudyApp.Pages
 
     public List<Day> Days = new List<Day>
     {
+      new Day(),
       new Day(200, 4),
       new Day(110, 3),
       new Day(195, 5),
@@ -44,6 +45,10 @@ namespace StudyApp.Pages
         if (day >= Days.Count || day < 0)
         {
           return NotFound();
+        }
+        else if (day == 0)
+        {
+          return Redirect("/Days/1");
         }
         else  
         {
