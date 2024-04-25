@@ -63,7 +63,7 @@ namespace StudyApp.Pages
         IsWeeklyDisplay = true;
         DisplayMinutes = Days.Sum(p => p.Minutes);
         DisplaySubjects = Days.Sum(p => p.Subjects);
-        DisplayWeeklyTarget = Target * Days.Count;
+        DisplayWeeklyTarget = Target * Days.Count - Target;
         PercentProgressMinutes = PercentProgress(DisplayMinutes, Target * Days.Count);
       }
         return Page();
