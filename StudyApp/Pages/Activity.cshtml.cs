@@ -33,7 +33,7 @@ namespace StudyApp.Pages
 
     public double PercentProgressMinutes { get; set; }
 
-    public void OnGet(int? day)
+    public IActionResult OnGet(int? day)
     {
       Target = 200;
       if (day.HasValue)
@@ -43,8 +43,7 @@ namespace StudyApp.Pages
         DisplaySubjects = Days[0].Subjects;
         if (day >= Days.Count || day < 0)
         {
-          DisplayMinutes = 0;
-          DisplaySubjects = 0;
+          return NotFound();
         }
         else  
         {
@@ -62,6 +61,7 @@ namespace StudyApp.Pages
         DisplayWeeklyTarget = Target * Days.Count;
         PercentProgressMinutes = PercentProgress(DisplayMinutes, Target * Days.Count);
       }
+        return Page();
     }
     
     private static double PercentProgress(double actual, double expected)
