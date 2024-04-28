@@ -34,13 +34,13 @@ namespace StudyApp.Data
 
       var StudyData = new StudyData[]
       {
-        new StudyData{ID="1",DayID="1", MinutesStudied=250, subjectsStudied = 3},
-        new StudyData{ID="2",DayID="2", MinutesStudied=150, subjectsStudied = 2},
-        new StudyData{ID="3",DayID="3", MinutesStudied=182, subjectsStudied = 5},
-        new StudyData{ID="4",DayID="4", MinutesStudied=201, subjectsStudied = 1},
-        new StudyData{ID="5",DayID="5", MinutesStudied=119, subjectsStudied = 6},
-        new StudyData{ID="6",DayID="6", MinutesStudied=89, subjectsStudied = 4},
-        new StudyData{ID="7",DayID="7", MinutesStudied=202, subjectsStudied = 1}
+        new StudyData{ID="1",DayID="1", MinutesStudied=250, SubjectsStudied = 3},
+        new StudyData{ID="2",DayID="2", MinutesStudied=150, SubjectsStudied = 2},
+        new StudyData{ID="3",DayID="3", MinutesStudied=182, SubjectsStudied = 5},
+        new StudyData{ID="4",DayID="4", MinutesStudied=201, SubjectsStudied = 1},
+        new StudyData{ID="5",DayID="5", MinutesStudied=119, SubjectsStudied = 6},
+        new StudyData{ID="6",DayID="6", MinutesStudied=89, SubjectsStudied = 4},
+        new StudyData{ID="7",DayID="7", MinutesStudied=202, SubjectsStudied = 1}
       };
       foreach (StudyData s in StudyData)
       {

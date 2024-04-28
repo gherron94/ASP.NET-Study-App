@@ -10,7 +10,7 @@ namespace StudyApp.Models
     {get; set;}
     public int MinutesStudied
     {get; set;}
-    public int subjectsStudied
+    public int SubjectsStudied
     {get; set;}
   }
 }

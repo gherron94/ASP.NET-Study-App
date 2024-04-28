@@ -1,0 +1,57 @@
+@page
+@model IndexModel
+@{
+  ViewData["Title"] = "Continent List";
+}
+
+<div class="jumbotron p-3 d-flex align-items-center">
+  <h1 class="display-4 flex-grow-1">
+    Week 1
+  </h1>
+  <a class="btn btn-primary btn-sm" asp-page="./Edit">
+    Log Day
+  </a>
+</div>
+
+<div class="d-flex bg-primary text-white">
+  <div class="p-2" style="flex:0 0 20%">
+    Day (Year)
+  </div>
+  <div class="p-2" style="flex:0 0 20%">
+    Day (Week)
+  </div>
+   <div class="p-2" style="flex:0 0 20%">
+    Minutes Studied
+  </div>
+   <div class="p-2" style="flex:0 0 20%">
+    Subjects Studied
+  </div>
+   <div class="p-2" style="flex:0 0 20%">
+    Options
+  </div>
+</div>
+
+@foreach (var item in Model.StudyData) {
+  <div class="d-flex border-left border-right border-bottom border-primary">
+    <div class="p-2" style="flex:0 0 20%">
+      @item.ID
+    </div>
+    <div class="p-2" style="flex:1 0 20%">
+      @item.DayID
+    </div>
+    <div class="p-2" style="flex:1 0 20%">
+      @item.MinutesStudied
+    </div>
+    <div class="p-2" style="flex:1 0 20%">
+      @item.SubjectsStudied
+    </div>
+    <div class="p-2 btn-group" style="flex:0 0 20%" role="group" >
+      <a class="btn btn-primary btn-sm" style="margin: 0 5px" asp-page="./Detail" asp-route-id="@item.ID">
+        Details
+      </a>
+      <a class="btn btn-primary btn-sm" asp-page="./Edit" asp-route-id="@item.ID">
+        Edit
+      </a>
+    </div>
+  </div>
+}

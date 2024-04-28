@@ -29,7 +29,8 @@ CreateDbIfNotExists(app);
         {
           var services = scope.ServiceProvider;
           var context = services.GetRequiredService<StudyContext>();
-          context.Database.EnsureCreated();
+          // context.Database.EnsureCreated();
+          TestData.Initialize(context);
         }
       }
 
