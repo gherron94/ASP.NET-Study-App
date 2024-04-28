@@ -2,11 +2,11 @@ using System;
 
 namespace StudyApp.Models
 {
-  public class StudyDataa
+  public class StudyData
   {
     public string ID
     {get; set;}
-    public string DayId
+    public string DayID
     {get; set;}
     public int MinutesStudied
     {get; set;}
