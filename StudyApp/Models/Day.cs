@@ -13,8 +13,8 @@ namespace StudyApp.Models
 
     public Day(int minutes = 0, int subjects = 0)
     {
-      Minutes = minutes;
-      Subjects = subjects;
+      this.Minutes = minutes;
+      this.Subjects = subjects;
     }
 
   }
