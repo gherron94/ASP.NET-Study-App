@@ -7,6 +7,5 @@ namespace StudyApp
   {
     int Minutes {get; set;}
     int Subjects {get; set;}
-
   }
 }
