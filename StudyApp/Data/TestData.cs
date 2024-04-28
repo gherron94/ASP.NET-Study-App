@@ -11,26 +11,26 @@ namespace StudyApp.Data
       context.Database.EnsureCreated();
 
 
-      if (context.Days.Any())
+      if (context.Weeks.Any())
       {
         return;   
       }
 
-      var Days = new DayTest[]
+      var Weeks = new Week[]
       {
-        new DayTest{ID="1",Name="Day 1"},
-        new DayTest{ID="2",Name="Day 2"},
-        new DayTest{ID="3",Name="Day 3"},
-        new DayTest{ID="4",Name="Day 4"},
-        new DayTest{ID="5",Name="Day 5"},
-        new DayTest{ID="6",Name="Day 6"},
-        new DayTest{ID="7",Name="Day 7"},
+        new Week{ID="1",WeekID="Week 1", TotalMinutesStudied=1231, TotalSubjectsStudied=30},
+        new Week{ID="2",WeekID="Week 2", TotalMinutesStudied=992, TotalSubjectsStudied=20},
+        new Week{ID="3",WeekID="Week 3", TotalMinutesStudied=1419, TotalSubjectsStudied=19},
+        new Week{ID="4",WeekID="Week 4", TotalMinutesStudied=889, TotalSubjectsStudied=12},
+        new Week{ID="5",WeekID="Week 5", TotalMinutesStudied=1191, TotalSubjectsStudied=35},
+        new Week{ID="6",WeekID="Week 6", TotalMinutesStudied=1200, TotalSubjectsStudied=29},
+        new Week{ID="7",WeekID="Week 7", TotalMinutesStudied=1020, TotalSubjectsStudied=23},
       };
-      foreach (DayTest d in Days)
+      foreach (Week w in Weeks)
       {
-        context.Days.Add(d);
+        context.Weeks.Add(w);
       }
-      context.SaveChanges();
+      context.SaveChanges(); 
 
       var StudyData = new StudyData[]
       {

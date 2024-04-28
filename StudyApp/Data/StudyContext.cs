@@ -7,7 +7,7 @@ namespace StudyApp.Data
   public class StudyContext : DbContext
   {
 
-    public DbSet<DayTest> Days
+    public DbSet<Week> Weeks
     {get; set;}
     public DbSet<StudyData> StudyData
     {get; set;}
@@ -18,7 +18,7 @@ namespace StudyApp.Data
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<DayTest>().ToTable("DayTest");
+      modelBuilder.Entity<Week>().ToTable("Week");
       modelBuilder.Entity<StudyData>().ToTable("StudyData");
 
     }
