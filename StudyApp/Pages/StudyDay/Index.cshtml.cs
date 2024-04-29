@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using StudyApp.Models;
 using StudyApp.Data;
 
-namespace StudyApp.Pages.StudyInfo
+namespace StudyApp.Pages.StudyDay
 {
   public class IndexModel : PageModel
   {
