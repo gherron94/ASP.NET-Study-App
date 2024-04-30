@@ -2,7 +2,7 @@ using System;
 
 namespace StudyApp.Models
 {
-  public class Week
+  public class Week : IWeek
   {
 
     public string ID
