@@ -45,13 +45,15 @@
     <div class="p-2" style="flex:1 0 20%">
       @item.SubjectsStudied
     </div>
-    <div class="p-2 btn-group" style="flex:0 0 20%" role="group" >
-      <a class="btn btn-primary btn-sm" style="margin: 0 5px" asp-page="./Detail" asp-route-id="@item.ID">
+    <form method="post" class="p-2 btn-group" style="flex:0 0 20%" role="group" >
+      <a class="btn btn-primary btn-sm" style="margin-left: 5px" asp-page="./Detail" asp-route-id="@item.ID">
         Details
       </a>
-      <a class="btn btn-primary btn-sm" asp-page="./Edit" asp-route-id="@item.ID">
+      <a class="btn btn-primary btn-sm" asp-page="./Edit" style="margin-left: 5px"  asp-route-id="@item.ID">
         Edit
       </a>
-    </div>
+      <input type="submit" value="Delete" class="btn btn-danger btn-sm" style="margin-left: 5px">
+      <input type="hidden" name="ID" value="@item.ID" />
+    </form>
   </div>
 }
