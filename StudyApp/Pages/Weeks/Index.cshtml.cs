@@ -24,5 +24,24 @@ namespace StudyApp.Pages.Weeks
     {
       Week = await _context.Weeks.ToListAsync();
     }
+
+    public async Task<IActionResult> OnPostAsync(string id)
+    {
+      if (id == null)
+      {
+        return NotFound();
+      }
+
+      Week Week = await _context.Weeks.FindAsync(id);
+
+      if (Week != null)
+      {
+        _context.Weeks.Remove(Week);
+      }
+
+      await _context.SaveChangesAsync();
+
+      return RedirectToPage("./Index");
+    }
   }
 }
