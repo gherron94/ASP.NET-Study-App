@@ -24,5 +24,24 @@ namespace StudyApp.Pages.StudyDay
     {
       StudyData = await _context.StudyData.ToListAsync();
     }
+
+    public async Task<IActionResult> OnPostAsync(string id)
+    {
+      if (id == null)
+      {
+        return NotFound();
+      }
+
+      StudyData StudyData = await _context.StudyData.FindAsync(id);
+
+      if (StudyData != null)
+      {
+        _context.StudyData.Remove(StudyData);
+      }
+
+      await _context.SaveChangesAsync();
+
+      return RedirectToPage("./Index");
+    }
   }
 }
