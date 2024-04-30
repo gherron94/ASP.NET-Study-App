@@ -2,7 +2,7 @@ using System;
 
 namespace StudyApp.Models
 {
-  public class StudyData
+  public class StudyData : IStudyData
   {
     public string ID
     {get; set;}
