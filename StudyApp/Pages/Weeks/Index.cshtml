@@ -1,4 +1,4 @@
-@page "/data/weeks"
+@page 
 @model IndexModel
 @{
   ViewData["Title"] = "Weeks";
@@ -40,7 +40,7 @@
       @item.TotalSubjectsStudied
     </div>
     <form method="post" class="p-2 btn-group" style="flex:0 0 25%" role="group" >
-      <a class="btn btn-primary btn-sm" style="margin: 0 5px" asp-page="./Detail" asp-route-id="@item.ID">
+      <a class="btn btn-primary btn-sm" style="margin: 0 5px" asp-page="./Details" asp-route-id="@item.ID">
         Details
       </a>
       <a class="btn btn-primary btn-sm" asp-page="./Edit" asp-route-id="@item.ID">

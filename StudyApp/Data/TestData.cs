@@ -18,13 +18,13 @@ namespace StudyApp.Data
 
       var Weeks = new Week[]
       {
-        new Week{ID="1",WeekID="Week 1", TotalMinutesStudied=1231, TotalSubjectsStudied=30},
-        new Week{ID="2",WeekID="Week 2", TotalMinutesStudied=992, TotalSubjectsStudied=20},
-        new Week{ID="3",WeekID="Week 3", TotalMinutesStudied=1419, TotalSubjectsStudied=19},
-        new Week{ID="4",WeekID="Week 4", TotalMinutesStudied=889, TotalSubjectsStudied=12},
-        new Week{ID="5",WeekID="Week 5", TotalMinutesStudied=1191, TotalSubjectsStudied=35},
-        new Week{ID="6",WeekID="Week 6", TotalMinutesStudied=1200, TotalSubjectsStudied=29},
-        new Week{ID="7",WeekID="Week 7", TotalMinutesStudied=1020, TotalSubjectsStudied=23},
+        new Week{ID="1", TotalMinutesStudied="1231", TotalSubjectsStudied="30"},
+        new Week{ID="2", TotalMinutesStudied="992", TotalSubjectsStudied="20"},
+        new Week{ID="3", TotalMinutesStudied="1419", TotalSubjectsStudied="19"},
+        new Week{ID="4", TotalMinutesStudied="889", TotalSubjectsStudied="12"},
+        new Week{ID="5", TotalMinutesStudied="1191", TotalSubjectsStudied="35"},
+        new Week{ID="6", TotalMinutesStudied="1200", TotalSubjectsStudied="29"},
+        new Week{ID="7", TotalMinutesStudied="1020", TotalSubjectsStudied="23"},
       };
       foreach (Week w in Weeks)
       {

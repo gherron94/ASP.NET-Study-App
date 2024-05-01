@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -16,10 +17,10 @@ namespace StudyApp.Pages.Weeks
     {
       _context = context;
     }
-    
+
     [BindProperty]
     public Week Week { get; set; }
-    
+
     public async Task<IActionResult> OnGetAsync(string id)
     {
       if (id == null)
@@ -37,15 +38,14 @@ namespace StudyApp.Pages.Weeks
       }
       return Page();
     }
-    
+
     public async Task<IActionResult> OnPostAsync(string id)
     {
       if (!ModelState.IsValid)
       {
         return Page();
       }
-      
-            if (id == null)
+      if (id == null)
       {
         _context.Weeks.Add(Week);
       }
@@ -54,7 +54,7 @@ namespace StudyApp.Pages.Weeks
         _context.Attach(Week).State = EntityState.Modified;
       }
 
-      await _context.SaveChangesAsync();
+       await _context.SaveChangesAsync();
       
       return RedirectToPage("./Index");
     }

@@ -2,16 +2,14 @@ using System;
 
 namespace StudyApp.Models
 {
-  public class Week : IWeek
+  public class Week 
   {
 
     public string ID
     {get; set;}
-    public string WeekID
+    public string TotalMinutesStudied
     {get; set;}
-    public int TotalMinutesStudied
-    {get; set;}
-    public int TotalSubjectsStudied
+    public string TotalSubjectsStudied
     {get; set;}
 
   }

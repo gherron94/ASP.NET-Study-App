@@ -1,0 +1,41 @@
+@page "{id}"
+@model DetailModel
+@{
+  ViewData["Title"] = "Details";
+}
+
+<div class="jumbotron p-3">
+  <div class="d-flex align-items-center">
+    <h1 class="display-4 flex-grow-1">
+      Week @Model.Week.ID Details
+    </h1>
+    <a class="btn btn-primary btn-sm" asp-page="./Index">
+      Back to Weeks 
+    </a>
+  </div>
+</div>
+
+<div class="d-flex">
+  <div class="p-2 bg-primary text-white text-right" style="flex:0 0 15%">
+    @Html.DisplayNameFor(model => model.Week.ID)
+  </div>
+  <div class="p-2 border-top border-right border-bottom border-primary" style="flex:1 0 auto">
+    @Html.DisplayFor(model => model.Week.ID)
+  </div>
+</div>
+<div class="d-flex">
+  <div class="p-2 bg-primary text-white text-right" style="flex:0 0 15%">
+    @Html.DisplayNameFor(model => model.Week.TotalMinutesStudied)
+  </div>
+  <div class="p-2 border-right border-bottom border-primary" style="flex:1 0 auto">
+    @Html.DisplayFor(model => model.Week.TotalMinutesStudied)
+  </div>
+</div>
+<div class="d-flex">
+  <div class="p-2 bg-primary text-white text-right" style="flex:0 0 15%">
+    @Html.DisplayNameFor(model => model.Week.TotalSubjectsStudied)
+  </div>
+  <div class="p-2 border-right border-bottom border-primary" style="flex:1 0 auto">
+    @Html.DisplayFor(model => model.Week.TotalSubjectsStudied)
+  </div>
+</div>
